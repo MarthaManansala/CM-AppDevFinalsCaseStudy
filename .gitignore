@@ -1,0 +1,36 @@
+# --- Android Studio & IntelliJ ---
+.idea/
+*.iml
+*.iws
+*.ipr
+.shelf/
+workspace.xml
+
+# --- Build Outputs ---
+build/
+*/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# --- Local Configurations (CRITICAL: Do not share these) ---
+# This contains your personal SDK path which will break your blockmates' builds.
+local.properties
+
+# --- Gradle ---
+.gradle/
+gradle/wrapper/gradle-wrapper.jar
+# Note: Do NOT ignore gradle-wrapper.properties or gradlew scripts!
+# Your team needs those to sync the Gradle version automatically.
+
+# --- Log Files ---
+*.log
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- Device & Emulator ---
+*.apk
+*.ap_
+*.dex
