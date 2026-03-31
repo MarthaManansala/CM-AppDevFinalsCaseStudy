@@ -106,7 +106,7 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
-    <!-- Days (Buttons) -->
+    <!-- Days (Buttons) (1-3) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -160,6 +160,7 @@
             android:textColor="@color/black"/>
     </LinearLayout>
 
+    <!-- Days (Buttons) (4-10) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -224,6 +225,213 @@
             android:layout_height="70dp"
             android:layout_weight="1"
             android:text="@string/d10"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <!-- Days (Buttons) (11-17) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/january11btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d11"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january12btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d12"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january13btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d13"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/january14btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d14"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january15btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d15"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january16btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d16"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january17btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d17"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <!-- Days (Buttons) (18-24) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/january18btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d18"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january19btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d19"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january20btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d20"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/january21btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d21"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january22btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d22"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january23btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d23"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january24btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d24"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <!-- Days (Buttons) (25-31) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/january25btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d25"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january26btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d26"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january27btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d27"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/january28btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d28"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january29btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d29"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january30btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d30"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/january31btn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="@string/d31"
             android:background="?android:attr/selectableItemBackground"
             android:textColor="@color/black"/>
     </LinearLayout>
