@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">PlanIT</string>
+    <string name="AddEvent">ADD EVENT</string>
+    <string name="ViewEvent">VIEW EVENT</string>
+    <string name="EditEvent">EDIT EVENT</string>
+    <string name="DeleteEvent">DELETE EVENT</string>
+    <string name="Return">RETURN</string>
     <string name="y2026">2026</string>
     <string name="mJanuary">January</string>
     <string name="mFebruary">February</string>
