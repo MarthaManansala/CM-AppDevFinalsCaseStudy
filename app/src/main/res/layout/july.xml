@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/july"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".July"
     android:background="@drawable/mainbg"
     android:orientation="vertical"
     android:padding="10dp">
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="30sp"
-        android:text="@string/mJanuary"
+        android:text="@string/mJuly"
         android:textSize="40sp"
         android:fontFamily="serif"
         android:gravity="center"/>
@@ -106,12 +106,12 @@
         android:layout_marginVertical="20dp"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/january1btn"
+            android:id="@+id/july1btn"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:text="@string/d1" />
+            android:text="@string/d1"/>
         <Button
-            android:id="@+id/january2btn"
+            android:id="@+id/july2btn"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="@string/d2"/>
