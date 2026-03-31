@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    android:id="@+id/setbuttons"
+    android:id="@+id/setButtons"
     android:gravity="center">
 
     <Button
@@ -20,14 +20,16 @@
         android:layout_height="60dp"
         android:text="@string/btnViewEvents"
         android:id="@+id/btnView"
-        android:textSize="22sp"/>
+        android:textSize="22sp"
+        android:layout_marginBottom="10sp"/>
 
     <Button
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:text="@string/btnEditEvents"
         android:id="@+id/btnEdit"
-        android:textSize="22sp"/>
+        android:textSize="22sp"
+        android:layout_marginBottom="10sp"/>
 
     <Button
         android:layout_width="250dp"
@@ -35,9 +37,5 @@
         android:text="@string/btnDelEvents"
         android:id="@+id/btnDelete"
         android:textSize="22sp"/>
-
-
-
-
 
 </LinearLayout>
