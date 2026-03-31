@@ -20,16 +20,14 @@
         android:layout_height="60dp"
         android:text="@string/btnViewEvents"
         android:id="@+id/btnView"
-        android:textSize="22sp"
-        android:layout_marginBottom="10dp"/>
+        android:textSize="22sp"/>
 
     <Button
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:text="@string/btnEditEvents"
         android:id="@+id/btnEdit"
-        android:textSize="22sp"
-        android:layout_marginBottom="10dp"/>
+        android:textSize="22sp"/>
 
     <Button
         android:layout_width="250dp"
