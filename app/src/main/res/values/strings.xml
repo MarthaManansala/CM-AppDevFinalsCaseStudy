@@ -51,4 +51,9 @@
     <string name="d29">29</string>
     <string name="d30">30</string>
     <string name="d31">31</string>
+    <string name="btnAddEvent">Add Event</string>
+    <string name="btnViewEvents">View Events</string>
+    <string name="btnEditEvents">Edit Events</string>
+    <string name="btnDelEvents">Delete Event</string>
+
 </resources>
