@@ -26,6 +26,94 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".February"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".February" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".March"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".March" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".April"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".April" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".May"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".May" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".June"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".June" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".July"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".July" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".August"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".August" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".September"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".September" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".October"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".October" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".November"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".November" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".December"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".December" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
