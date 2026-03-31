@@ -1,41 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
     android:id="@+id/setButtons"
-    android:gravity="center">
+    android:background="@drawable/mainbg">
 
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:text="@string/btnAddEvent"
-        android:id="@+id/btnAdd"
-        android:textSize="22sp"
-        android:layout_marginBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/applogoplain"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:fontFamily="@font/michroma"
+            android:textSize="25sp"
+            android:layout_gravity="center" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/y2026"
+            android:fontFamily="serif"
+            android:textSize="35sp"
+            android:layout_gravity="bottom"
+            android:gravity="end"/>
+    </LinearLayout>
 
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:text="@string/btnViewEvents"
-        android:id="@+id/btnView"
-        android:textSize="22sp"
-        android:layout_marginBottom="10sp"/>
-
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:text="@string/btnEditEvents"
-        android:id="@+id/btnEdit"
-        android:textSize="22sp"
-        android:layout_marginBottom="10sp"/>
-
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:text="@string/btnDelEvents"
-        android:id="@+id/btnDelete"
-        android:textSize="22sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="40dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/selectedDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30sp"
+            android:text="selected month/day"
+            android:textSize="40sp"
+            android:fontFamily="serif"
+            android:gravity="center"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:text="@string/btnAddEvent"
+            android:textSize="40sp"
+            android:fontFamily="sans-serif-black"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:text="@string/btnViewEvents"
+            android:textSize="40sp"
+            android:fontFamily="sans-serif-black"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:text="@string/btnEditEvent"
+            android:textSize="40sp"
+            android:fontFamily="sans-serif-black"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:text="@string/btnDeleteEvent"
+            android:textSize="40sp"
+            android:fontFamily="sans-serif-black"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:text="@string/btnReturn"
+            android:textSize="40sp"
+            android:fontFamily="sans-serif-black"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
+</LinearLayout>
 
 </LinearLayout>

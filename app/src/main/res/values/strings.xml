@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">PlanIT</string>
-    <string name="AddEvent">ADD EVENT</string>
-    <string name="ViewEvent">VIEW EVENT</string>
-    <string name="EditEvent">EDIT EVENT</string>
-    <string name="DeleteEvent">DELETE EVENT</string>
-    <string name="Return">RETURN</string>
+    <string name="btnAddEvent">ADD EVENT</string>
+    <string name="btnViewEvents">VIEW EVENT</string>
+    <string name="btnEditEvent">EDIT EVENT</string>
+    <string name="btnDeleteEvent">DELETE EVENT</string>
+    <string name="btnReturn">RETURN</string>
     <string name="y2026">2026</string>
     <string name="mJanuary">January</string>
     <string name="mFebruary">February</string>
@@ -56,9 +56,5 @@
     <string name="d29">29</string>
     <string name="d30">30</string>
     <string name="d31">31</string>
-    <string name="btnAddEvent">Add Event</string>
-    <string name="btnViewEvents">View Events</string>
-    <string name="btnEditEvents">Edit Events</string>
-    <string name="btnDelEvents">Delete Event</string>
 
 </resources>
