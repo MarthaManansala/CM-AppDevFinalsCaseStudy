@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".SetOfButtonsMarch"
+    tools:context=".SetOfButtonsApril"
     android:background="@drawable/mainbg">
 
     <LinearLayout
@@ -42,18 +42,18 @@
         android:layout_marginTop="30dp"
         android:gravity="center">
         <TextView
-            android:id="@+id/MarchSelectedDay"
+            android:id="@+id/AprilSelectedDay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
-            android:text="@string/mMarch"
+            android:text="@string/mApril"
             android:textSize="40sp"
             android:fontFamily="serif"
             android:gravity="center"/>
 
         <Button
-            android:id="@+id/btnAddEventMarch"
+            android:id="@+id/btnAddEventApril"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
@@ -64,7 +64,7 @@
             android:textSize="16sp"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
         <Button
-            android:id="@+id/btnViewEventMarch"
+            android:id="@+id/btnViewEventApril"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
@@ -75,7 +75,7 @@
             android:textSize="16sp"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
         <Button
-            android:id="@+id/btnEditEventMarch"
+            android:id="@+id/btnEditEventApril"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
@@ -86,7 +86,7 @@
             android:textSize="16sp"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
         <Button
-            android:id="@+id/btnDeleteEventMarch"
+            android:id="@+id/btnDeleteEventApril"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
@@ -97,7 +97,7 @@
             android:textSize="16sp"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
         <Button
-            android:id="@+id/btnReturnMarch"
+            android:id="@+id/btnReturnApril"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
