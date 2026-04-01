@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/homeLogo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/applogoplain" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/homeLogo"
+                android:layout_marginStart="15dp"
+                android:text="Welcome to 2026"
+                android:fontFamily="@font/michroma"
+                android:textSize="22sp"
+                android:textColor="#3E2723" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeLogo"
+                android:layout_marginTop="-25dp"
+                android:layout_toEndOf="@id/homeLogo"
+                android:layout_marginStart="15dp"
+                android:text="Organize your year beautifully."
+                android:fontFamily="serif"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="25dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6B513E">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:text="PlanIT,\n an event planner made for you"
+                    android:fontFamily="serif"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnViewFullCalendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="15dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="VIEW CALENDAR"
+                    android:textColor="#6B513E"
+                    style="@style/Widget.MaterialComponents.Button.TextButton" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jump to Month"
+            android:fontFamily="@font/michroma"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button android:id="@+id/btnJumpJan" android:layout_width="80dp" android:layout_height="80dp" android:text="JAN" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpFeb" android:layout_width="80dp" android:layout_height="80dp" android:text="FEB" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpMar" android:layout_width="80dp" android:layout_height="80dp" android:text="MAR" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpApr" android:layout_width="80dp" android:layout_height="80dp" android:text="APR" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpMay" android:layout_width="80dp" android:layout_height="80dp" android:text="MAY" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+                <Button android:id="@+id/btnJumpJune" android:layout_width="80dp" android:layout_height="80dp" android:text="JUN" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpJuly" android:layout_width="80dp" android:layout_height="80dp" android:text="JUL" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpAug" android:layout_width="80dp" android:layout_height="80dp" android:text="AUG" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpSept" android:layout_width="80dp" android:layout_height="80dp" android:text="SEP" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpOct" android:layout_width="80dp" android:layout_height="80dp" android:text="OCT" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpNov" android:layout_width="80dp" android:layout_height="80dp" android:text="NOV" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpDec" android:layout_width="80dp" android:layout_height="80dp" android:text="DEC" android:backgroundTint="#6B513E" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Events"
+            android:fontFamily="@font/michroma"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#F5F5F5"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp">
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="#6B513E"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Project Deadline"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="June 15, 2026 · 10:00 AM"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

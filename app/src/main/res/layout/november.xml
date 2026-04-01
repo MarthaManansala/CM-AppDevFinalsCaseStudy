@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/november"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".November"
+    tools:context=".MainActivity"
     android:background="@drawable/mainbg"
     android:orientation="vertical"
     android:padding="10dp">
@@ -25,12 +25,13 @@
             android:textSize="25sp"
             android:layout_gravity="center" />
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/y2026"
             android:fontFamily="serif"
             android:textSize="35sp"
-            android:layout_gravity="bottom"
+            android:layout_gravity="center"
+            android:layout_weight="1"
             android:gravity="end"/>
     </LinearLayout>
 
@@ -43,78 +44,109 @@
         android:fontFamily="serif"
         android:gravity="center"/>
 
-    <!--Days (TextViews)-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:gravity="center"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5sp"
-            android:text="@string/Sunday"
-            android:textSize="20sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5sp"
-            android:text="@string/Monday"
-            android:textSize="20sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5sp"
-            android:text="@string/Tuesday"
-            android:textSize="20sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Wednesday"
-            android:textSize="20sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5sp"
-            android:text="@string/Thursday"
-            android:textSize="20sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-             android:layout_marginStart="5sp"
-            android:text="@string/Friday"
-            android:textSize="20sp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-             android:layout_marginStart="5sp"
-            android:text="@string/Saturday"
-            android:textSize="20sp"
-            android:gravity="center"/>
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginEnd="5sp" android:text="@string/Sunday" android:textSize="20sp" android:gravity="center" android:layout_weight="1"/>
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginEnd="5sp" android:text="@string/Monday" android:textSize="20sp" android:gravity="center" android:layout_weight="1"/>
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginEnd="5sp" android:text="@string/Tuesday" android:textSize="20sp" android:gravity="center" android:layout_weight="1"/>
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:text="@string/Wednesday" android:textSize="20sp" android:gravity="center" android:layout_weight="1"/>
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginStart="5sp" android:text="@string/Thursday" android:textSize="20sp" android:gravity="center" android:layout_weight="1"/>
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginStart="5sp" android:text="@string/Friday" android:textSize="20sp" android:gravity="center" android:layout_weight="1"/>
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:text="@string/Saturday" android:textSize="20sp" android:gravity="center" android:layout_weight="1"/>
     </LinearLayout>
 
-    <!--Days (Buttons)-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
-        <Button
-            android:id="@+id/november1btn"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="@string/d1"/>
-        <Button
-            android:id="@+id/november2btn"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="@string/d2"/>
+        <Button android:id="@+id/nov1btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d1" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov2btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d2" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov3btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d3" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov4btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d4" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov5btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d5" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov6btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d6" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov7btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d7" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/nov8btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d8" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov9btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d9" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov10btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d10" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov11btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d11" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov12btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d12" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov13btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d13" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov14btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d14" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/nov15btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d15" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov16btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d16" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov17btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d17" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov18btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d18" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov19btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d19" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov20btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d20" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov21btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d21" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/nov22btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d22" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov23btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d23" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov24btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d24" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov25btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d25" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov26btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d26" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov27btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d27" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov28btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d28" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/nov29btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d29" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/nov30btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d30" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <TextView android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/><TextView android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/><TextView android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/><TextView android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/><TextView android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCalendarEvents"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="30dp"
+            android:backgroundTint="#6B513E"
+            android:fontFamily="@font/poppins_medium"
+            android:text="CALENDAR EVENTS"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+        <Button
+            android:id="@+id/btnToDecemberLayout"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="40dp"
+            android:backgroundTint="#6B513E"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/nextPageIcon"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+    </LinearLayout>
 </LinearLayout>
