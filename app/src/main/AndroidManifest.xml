@@ -27,6 +27,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".SetOfButtonsJanuary"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".SetOfButtonsJanuary" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".February"
             android:exported="true">
             <intent-filter>
