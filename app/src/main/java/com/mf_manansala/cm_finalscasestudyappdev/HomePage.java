@@ -14,6 +14,16 @@ public class HomePage extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
 
+        Button btnViewFullCalendar = findViewById(R.id.btnViewFullCalendar);
+        btnViewFullCalendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /* View Database/Records Added by the User */
+                intent = new Intent(HomePage.this, RecordsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button btnJumpJan = findViewById(R.id.btnJumpJan);
         btnJumpJan.setOnClickListener(new View.OnClickListener() {
             @Override
