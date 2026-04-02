@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/mainbg"
+    tools:context=".HomePage"
     android:fillViewport="true">
 
     <LinearLayout
@@ -101,19 +103,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button android:id="@+id/btnJumpJan" android:layout_width="80dp" android:layout_height="80dp" android:text="JAN" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpFeb" android:layout_width="80dp" android:layout_height="80dp" android:text="FEB" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpMar" android:layout_width="80dp" android:layout_height="80dp" android:text="MAR" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpApr" android:layout_width="80dp" android:layout_height="80dp" android:text="APR" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpMay" android:layout_width="80dp" android:layout_height="80dp" android:text="MAY" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpJan" android:layout_width="80dp" android:layout_height="80dp" android:text="JAN" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpFeb" android:layout_width="80dp" android:layout_height="80dp" android:text="FEB" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpMar" android:layout_width="80dp" android:layout_height="80dp" android:text="MAR" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpApr" android:layout_width="80dp" android:layout_height="80dp" android:text="APR" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpMay" android:layout_width="80dp" android:layout_height="80dp" android:text="MAY" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
-                <Button android:id="@+id/btnJumpJune" android:layout_width="80dp" android:layout_height="80dp" android:text="JUN" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpJuly" android:layout_width="80dp" android:layout_height="80dp" android:text="JUL" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpAug" android:layout_width="80dp" android:layout_height="80dp" android:text="AUG" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpSept" android:layout_width="80dp" android:layout_height="80dp" android:text="SEP" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpOct" android:layout_width="80dp" android:layout_height="80dp" android:text="OCT" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpNov" android:layout_width="80dp" android:layout_height="80dp" android:text="NOV" android:backgroundTint="#6B513E" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
-                <Button android:id="@+id/btnJumpDec" android:layout_width="80dp" android:layout_height="80dp" android:text="DEC" android:backgroundTint="#6B513E" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpJune" android:layout_width="80dp" android:layout_height="80dp" android:text="JUN" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpJuly" android:layout_width="80dp" android:layout_height="80dp" android:text="JUL" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpAug" android:layout_width="80dp" android:layout_height="80dp" android:text="AUG" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpSept" android:layout_width="80dp" android:layout_height="80dp" android:text="SEP" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpOct" android:layout_width="80dp" android:layout_height="80dp" android:text="OCT" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpNov" android:layout_width="80dp" android:layout_height="80dp" android:text="NOV" android:background="#6B513E" app:backgroundTint="@null" android:layout_marginEnd="10dp" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+                <Button android:id="@+id/btnJumpDec" android:layout_width="80dp" android:layout_height="80dp" android:text="DEC" android:background="#6B513E" app:backgroundTint="@null" style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 
             </LinearLayout>
         </HorizontalScrollView>
