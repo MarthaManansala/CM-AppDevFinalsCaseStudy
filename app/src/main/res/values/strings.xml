@@ -5,6 +5,7 @@
     <string name="btnEditEvent">EDIT EVENT</string>
     <string name="btnDeleteEvent">DELETE EVENT</string>
     <string name="btnReturn">RETURN</string>
+    <string name="HOME">HOME</string>
     <string name="nextPageIcon"> ► </string>
     <string name="returnPageIcon"> ◄ </string>
     <string name="y2026">2026</string>

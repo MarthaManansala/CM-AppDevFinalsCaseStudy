@@ -9,7 +9,7 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 
     Button d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20, d21, d22, d23, d24, d25, d26, d27, d28, d29, d30, d31;
-    Button btnCalendarEvents, btnToFebruaryLayout;
+    Button btnToHome, btnToFebruaryLayout;
     Intent intent;
 
     @Override
@@ -296,12 +296,11 @@ public class MainActivity extends Activity {
             }
         });
 
-        btnCalendarEvents = findViewById(R.id.btnCalendarEvents);
-        btnCalendarEvents.setOnClickListener(new View.OnClickListener() {
+        btnToHome = findViewById(R.id.btnToHome);
+        btnToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* database layout */
-                intent = new Intent(MainActivity.this, SetOfButtonsJanuary.class);
+                intent = new Intent(MainActivity.this, HomePage.class);
                 startActivity(intent);
             }
         });
