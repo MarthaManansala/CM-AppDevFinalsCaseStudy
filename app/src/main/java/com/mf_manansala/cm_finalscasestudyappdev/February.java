@@ -269,12 +269,11 @@ public class February extends Activity {
         });
 
 
-        Button btnCalendarEvents = findViewById(R.id.btnCalendarEvents);
-        btnCalendarEvents.setOnClickListener(new View.OnClickListener() {
+        Button btnReturnJanuary = findViewById(R.id.btnReturnToJanuary);
+        btnReturnJanuary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* database layout */
-                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                intent = new Intent(February.this, MainActivity.class);
                 startActivity(intent);
             }
         });
