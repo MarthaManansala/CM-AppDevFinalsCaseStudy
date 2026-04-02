@@ -57,56 +57,61 @@
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
-            android:backgroundTint="#6B513E"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/btnAddEvent"
             android:textColor="#ffffff"
             android:textSize="16sp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            android:background="#091726"
+            app:backgroundTint="@null"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
         <Button
             android:id="@+id/btnViewEventMay"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
-            android:backgroundTint="#6B513E"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/btnViewEvents"
             android:textColor="#ffffff"
             android:textSize="16sp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            android:background="#091726"
+            app:backgroundTint="@null"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
         <Button
             android:id="@+id/btnEditEventMay"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
-            android:backgroundTint="#6B513E"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/btnEditEvent"
             android:textColor="#ffffff"
             android:textSize="16sp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            android:background="#091726"
+            app:backgroundTint="@null"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
         <Button
             android:id="@+id/btnDeleteEventMay"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
-            android:backgroundTint="#6B513E"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/btnDeleteEvent"
             android:textColor="#ffffff"
             android:textSize="16sp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            android:background="#091726"
+            app:backgroundTint="@null"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
         <Button
             android:id="@+id/btnReturnMay"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_margin="8dp"
-            android:backgroundTint="#6B513E"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/btnReturn"
             android:textColor="#ffffff"
             android:textSize="16sp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            android:background="#091726"
+            app:backgroundTint="@null"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
 </LinearLayout>
 
 </LinearLayout>

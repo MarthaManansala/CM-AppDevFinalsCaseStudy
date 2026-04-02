@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -446,23 +447,25 @@
             android:layout_height="70dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="30dp"
-            android:backgroundTint="#091726"
             android:fontFamily="@font/poppins_medium"
             android:text="CALENDAR EVENTS"
             android:textColor="#ffffff"
             android:textSize="16sp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            android:background="#091726"
+            app:backgroundTint="@null"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton" />
     <Button
             android:id="@+id/btnToFebruaryLayout"
             android:layout_width="150dp"
             android:layout_height="70dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="40dp"
-            android:backgroundTint="#091726"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/nextPageIcon"
             android:textColor="#ffffff"
             android:textSize="16sp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            android:background="#091726"
+            app:backgroundTint="@null"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
     </LinearLayout>
 </LinearLayout>
