@@ -301,6 +301,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 /* database layout */
+                intent = new Intent(MainActivity.this, SetOfButtonsJanuary.class);
+                startActivity(intent);
             }
         });
 

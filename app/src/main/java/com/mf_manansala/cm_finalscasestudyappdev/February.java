@@ -15,6 +15,272 @@ public class February extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.february);
 
+
+        Button d1 = findViewById(R.id.february1btn);
+        d1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d2 = findViewById(R.id.february2btn);
+        d2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d3 = findViewById(R.id.february3btn);
+        d3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d4 = findViewById(R.id.february4btn);
+        d4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d5 = findViewById(R.id.february5btn);
+        d5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d6 = findViewById(R.id.february6btn);
+        d6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d7 = findViewById(R.id.february7btn);
+        d7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d8 = findViewById(R.id.february8btn);
+        d8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d9 = findViewById(R.id.february9btn);
+        d9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d10 = findViewById(R.id.february10btn);
+        d10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d11 = findViewById(R.id.february11btn);
+        d11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d12 = findViewById(R.id.february12btn);
+        d12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d13 = findViewById(R.id.february13btn);
+        d13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d14 = findViewById(R.id.february14btn);
+        d14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d15 = findViewById(R.id.february15btn);
+        d15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d16 = findViewById(R.id.february16btn);
+        d16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d17 = findViewById(R.id.february17btn);
+        d17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d18 = findViewById(R.id.february18btn);
+        d18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d19 = findViewById(R.id.february19btn);
+        d19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d20 = findViewById(R.id.february20btn);
+        d20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d21 = findViewById(R.id.february21btn);
+        d21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d22 = findViewById(R.id.february22btn);
+        d22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d23 = findViewById(R.id.february23btn);
+        d23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d24 = findViewById(R.id.february24btn);
+        d24.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d25 = findViewById(R.id.february25btn);
+        d25.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d26 = findViewById(R.id.february26btn);
+        d26.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d27 = findViewById(R.id.february27btn);
+        d27.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+        Button d28 = findViewById(R.id.february28btn);
+        d28.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+
+        Button btnCalendarEvents = findViewById(R.id.btnCalendarEvents);
+        btnCalendarEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /* database layout */
+                intent = new Intent(February.this, SetOfButtonsFebruary.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         Button btnToMarchLayout = findViewById(R.id.btnToMarchLayout);
         btnToMarchLayout.setOnClickListener(new View.OnClickListener() {
             @Override
