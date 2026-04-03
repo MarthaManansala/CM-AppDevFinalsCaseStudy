@@ -5,16 +5,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class SetOfButtonsJanuary extends Activity {
 
     Button btnAddEvenJanuary, btnViewEventJanuary, btnEditEventJanuary, btnDeleteEventJanuary, btnReturn;
+    TextView JanuarySelectedDay;
     Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_of_buttons_january);
+
+        JanuarySelectedDay = findViewById(R.id.JanuarySelectedDay);
+        String month = getIntent().getStringExtra("PickedMonth");
+        int day = getIntent().getIntExtra("PickedDay", 0);
+        String formattedDate = getString(R.string.date_display_format, month, day);
+        JanuarySelectedDay.setText(formattedDate);
 
         btnAddEvenJanuary = findViewById(R.id.btnAddEventJanuary);
         btnAddEvenJanuary.setOnClickListener(new View.OnClickListener() {
