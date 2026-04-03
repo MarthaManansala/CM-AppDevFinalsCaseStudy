@@ -20,10 +20,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashScreen"
+            android:name=".AddEvent"
             android:exported="true">
             <intent-filter>
-                <action android:name=".SplashScreen" />
+                <action android:name=".AddEvent" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

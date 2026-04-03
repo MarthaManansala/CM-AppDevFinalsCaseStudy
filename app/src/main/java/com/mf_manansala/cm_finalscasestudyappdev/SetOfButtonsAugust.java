@@ -25,7 +25,8 @@ public class SetOfButtonsAugust extends Activity {
         btnAddEventAugust.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* Add Event Function */
+                intent = new Intent(SetOfButtonsAugust.this, AddEvent.class);
+                startActivity(intent);
             }
         });
 

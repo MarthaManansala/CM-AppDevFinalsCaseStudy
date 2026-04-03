@@ -25,7 +25,8 @@ public class SetOfButtonsMarch extends Activity{
         btnAddEventMarch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* Add Event Function */
+                intent = new Intent(SetOfButtonsMarch.this, AddEvent.class);
+                startActivity(intent);
             }
         });
 

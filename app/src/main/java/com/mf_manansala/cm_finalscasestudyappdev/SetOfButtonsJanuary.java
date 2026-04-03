@@ -28,7 +28,8 @@ public class SetOfButtonsJanuary extends Activity {
         btnAddEvenJanuary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* Add Event Function */
+                intent = new Intent(SetOfButtonsJanuary.this, AddEvent.class);
+                startActivity(intent);
             }
         });
 
