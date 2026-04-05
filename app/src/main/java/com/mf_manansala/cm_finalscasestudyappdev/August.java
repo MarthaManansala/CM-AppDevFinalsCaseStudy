@@ -19,7 +19,7 @@ public class August extends Activity {
         d1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 1);
                 startActivity(intent);
@@ -30,7 +30,7 @@ public class August extends Activity {
         d2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 2);
                 startActivity(intent);
@@ -41,7 +41,7 @@ public class August extends Activity {
         d3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 3);
                 startActivity(intent);
@@ -52,7 +52,7 @@ public class August extends Activity {
         d4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 4);
                 startActivity(intent);
@@ -63,7 +63,7 @@ public class August extends Activity {
         d5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 5);
                 startActivity(intent);
@@ -74,7 +74,7 @@ public class August extends Activity {
         d6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 6);
                 startActivity(intent);
@@ -85,7 +85,7 @@ public class August extends Activity {
         d7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 7);
                 startActivity(intent);
@@ -96,7 +96,7 @@ public class August extends Activity {
         d8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 8);
                 startActivity(intent);
@@ -107,7 +107,7 @@ public class August extends Activity {
         d9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 9);
                 startActivity(intent);
@@ -118,7 +118,7 @@ public class August extends Activity {
         d10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 10);
                 startActivity(intent);
@@ -129,7 +129,7 @@ public class August extends Activity {
         d11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 11);
                 startActivity(intent);
@@ -140,7 +140,7 @@ public class August extends Activity {
         d12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 12);
                 startActivity(intent);
@@ -151,7 +151,7 @@ public class August extends Activity {
         d13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 13);
                 startActivity(intent);
@@ -162,7 +162,7 @@ public class August extends Activity {
         d14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 14);
                 startActivity(intent);
@@ -173,7 +173,7 @@ public class August extends Activity {
         d15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 15);
                 startActivity(intent);
@@ -184,7 +184,7 @@ public class August extends Activity {
         d16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 16);
                 startActivity(intent);
@@ -195,7 +195,7 @@ public class August extends Activity {
         d17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 17);
                 startActivity(intent);
@@ -206,7 +206,7 @@ public class August extends Activity {
         d18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 18);
                 startActivity(intent);
@@ -217,7 +217,7 @@ public class August extends Activity {
         d19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 19);
                 startActivity(intent);
@@ -228,7 +228,7 @@ public class August extends Activity {
         d20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 20);
                 startActivity(intent);
@@ -239,7 +239,7 @@ public class August extends Activity {
         d21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 21);
                 startActivity(intent);
@@ -250,7 +250,7 @@ public class August extends Activity {
         d22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 22);
                 startActivity(intent);
@@ -261,7 +261,7 @@ public class August extends Activity {
         d23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 23);
                 startActivity(intent);
@@ -272,7 +272,7 @@ public class August extends Activity {
         d24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 24);
                 startActivity(intent);
@@ -283,7 +283,7 @@ public class August extends Activity {
         d25.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 25);
                 startActivity(intent);
@@ -294,7 +294,7 @@ public class August extends Activity {
         d26.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 26);
                 startActivity(intent);
@@ -305,7 +305,7 @@ public class August extends Activity {
         d27.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 27);
                 startActivity(intent);
@@ -316,7 +316,7 @@ public class August extends Activity {
         d28.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 28);
                 startActivity(intent);
@@ -327,7 +327,7 @@ public class August extends Activity {
         d29.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 29);
                 startActivity(intent);
@@ -338,7 +338,7 @@ public class August extends Activity {
         d30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 30);
                 startActivity(intent);
@@ -349,7 +349,7 @@ public class August extends Activity {
         d31.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(August.this, SetOfButtonsAugust.class);
+                intent = new Intent(August.this, SetOfButtons.class);
                 intent.putExtra("PickedMonth", "August");
                 intent.putExtra("PickedDay", 31);
                 startActivity(intent);

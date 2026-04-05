@@ -36,6 +36,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/addEventPickedDay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="30sp"
@@ -58,7 +59,7 @@
             android:gravity=""
             android:textColor="@color/black"/>
         <EditText
-            android:id="@+id/eventTitle"
+            android:id="@+id/addEventTitle"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:hint=" ex. Mom's Birthday"
@@ -80,7 +81,7 @@
             android:gravity=""
             android:textColor="@color/black"/>
         <EditText
-            android:id="@+id/eventDateAndTime"
+            android:id="@+id/addEventDateAndTime"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:hint=" ex. January 1 | 6:00 PM"
@@ -102,7 +103,7 @@
             android:gravity=""
             android:textColor="@color/black"/>
         <EditText
-            android:id="@+id/eventLocation"
+            android:id="@+id/addEventLocation"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:hint=" ex. Physical/Online"
@@ -124,7 +125,7 @@
             android:gravity=""
             android:textColor="@color/black"/>
         <EditText
-            android:id="@+id/eventNotes"
+            android:id="@+id/addEventNotes"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:hint=" ex. Give her flowers"
@@ -139,7 +140,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
      <Button
-            android:id="@+id/btnReturnToSetOfButtons"
+            android:id="@+id/addEventReturn"
             android:layout_width="150dp"
             android:layout_height="70dp"
             android:layout_marginHorizontal="20dp"
@@ -152,7 +153,7 @@
             app:backgroundTint="@null"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton" />
     <Button
-            android:id="@+id/btnSubmitAddEvent"
+            android:id="@+id/addEventSubmit"
             android:layout_width="150dp"
             android:layout_height="70dp"
             android:layout_marginHorizontal="20dp"

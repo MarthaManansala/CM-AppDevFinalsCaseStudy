@@ -20,26 +20,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddEvent"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".AddEvent" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name=".MainActivity" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SetOfButtonsJanuary"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsJanuary" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -52,26 +36,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SetOfButtonsFebruary"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsFebruary" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".March"
             android:exported="true">
             <intent-filter>
                 <action android:name=".March" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SetOfButtonsMarch"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsMarch" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -84,26 +52,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SetOfButtonsApril"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsApril" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".May"
             android:exported="true">
             <intent-filter>
                 <action android:name=".May" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SetOfButtonsMay"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsMay" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -116,26 +68,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SetOfButtonsJune"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsJune" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".July"
             android:exported="true">
             <intent-filter>
                 <action android:name=".July" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SetOfButtonsJuly"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsJuly" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -148,26 +84,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SetOfButtonsAugust"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsAugust" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".September"
             android:exported="true">
             <intent-filter>
                 <action android:name=".September" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SetOfButtonsSeptember"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsSeptember" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -180,26 +100,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SetOfButtonsOctober"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsOctober" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".November"
             android:exported="true">
             <intent-filter>
                 <action android:name=".November" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SetOfButtonsNovember"
-            android:exported="true">
-            <intent-filter>
-                <action android:name=".SetOfButtonsNovember" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -212,10 +116,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SetOfButtonsDecember"
+            android:name=".SetOfButtons"
             android:exported="true">
             <intent-filter>
-                <action android:name=".SetOfButtonsDecember" />
+                <action android:name=".SetOfButtons" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddEvent"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".AddEvent" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
