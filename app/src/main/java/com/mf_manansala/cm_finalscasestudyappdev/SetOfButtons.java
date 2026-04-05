@@ -41,7 +41,10 @@ public class SetOfButtons extends Activity {
         btnViewEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* View Events Function */
+                Intent intent = new Intent(SetOfButtons.this, RecordsActivity.class);
+                intent.putExtra("PickedMonth", month);
+                intent.putExtra("PickedDay", day);
+                startActivity(intent);
             }
         });
 

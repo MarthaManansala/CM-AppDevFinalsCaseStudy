@@ -116,6 +116,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".RecordsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name=".RecordsActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".SetOfButtons"
             android:exported="true">
             <intent-filter>

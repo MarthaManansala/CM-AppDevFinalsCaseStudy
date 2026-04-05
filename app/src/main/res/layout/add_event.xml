@@ -74,17 +74,17 @@
         android:orientation="horizontal"
         android:padding="5dp">
         <TextView
-            android:layout_width="140dp"
+            android:layout_width="70dp"
             android:layout_height="70dp"
-            android:text="Date and Time:"
+            android:text="Time:"
             android:textSize="20sp"
             android:gravity=""
             android:textColor="@color/black"/>
         <EditText
-            android:id="@+id/addEventDateAndTime"
+            android:id="@+id/addEventTime"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:hint=" ex. January 1 | 6:00 PM"
+            android:hint=" 00:00 AM/PM"
             android:textSize="20sp"
             android:inputType="text"
             android:textColor="@color/black"/>
@@ -96,7 +96,7 @@
         android:orientation="horizontal"
         android:padding="5dp">
         <TextView
-            android:layout_width="110dp"
+            android:layout_width="100dp"
             android:layout_height="70dp"
             android:text="Location:"
             android:textSize="20sp"
@@ -118,7 +118,7 @@
         android:orientation="horizontal"
         android:padding="5dp">
         <TextView
-            android:layout_width="80dp"
+            android:layout_width="70dp"
             android:layout_height="70dp"
             android:text="Notes:"
             android:textSize="20sp"

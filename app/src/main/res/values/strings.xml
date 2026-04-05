@@ -2,7 +2,7 @@
     <string name="app_name">PlanIT</string>
     <string name="btnAddEvent">ADD EVENT</string>
     <string name="btnViewEvents">VIEW EVENTS</string>
-    <string name="btnEditEvent">EDIT EVENT</string>
+    <string name="btnEditEvent">EDIT EVENTS</string>
     <string name="btnDeleteEvent">DELETE EVENT</string>
     <string name="btnReturn">RETURN</string>
     <string name="HOME">HOME</string>
