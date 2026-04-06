@@ -25,8 +25,8 @@ public class HomePage extends Activity {
 
         View upEvent2 = findViewById(R.id.upEvent2); View upEvent3 = findViewById(R.id.upEvent3);
         TextView eTitle1 = findViewById(R.id.eTitle1); TextView eDate1 = findViewById(R.id.eDate1); TextView eTime1 = findViewById(R.id.eTime1);
-        TextView eTitle2 = findViewById(R.id.eTitle1); TextView eDate2 = findViewById(R.id.eDate1); TextView eTime2 = findViewById(R.id.eTime1);
-        TextView eTitle3 = findViewById(R.id.eTitle1); TextView eDate3 = findViewById(R.id.eDate1); TextView eTime3 = findViewById(R.id.eTime1);
+        TextView eTitle2 = findViewById(R.id.eTitle2); TextView eDate2 = findViewById(R.id.eDate2); TextView eTime2 = findViewById(R.id.eTime2);
+        TextView eTitle3 = findViewById(R.id.eTitle3); TextView eDate3 = findViewById(R.id.eDate3); TextView eTime3 = findViewById(R.id.eTime3);
 
         SQLiteDatabaseHelper dbHelper = new SQLiteDatabaseHelper(this);
 
@@ -37,20 +37,20 @@ public class HomePage extends Activity {
         Cursor rs = dbHelper.getUpcomingEvents(currentMonth, currentDay);
         if(rs != null && rs.moveToFirst()) {
             eTitle1.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
-            eDate1.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)));
+            eDate1.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", 2026 • ");
             eTime1.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
 
             if(rs.moveToNext()) {
                 upEvent2.setVisibility(View.VISIBLE);
                 eTitle2.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
-                eDate2.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)));
+                eDate2.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", 2026 • ");
                 eTime2.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
             } else {upEvent2.setVisibility(View.GONE);}
 
             if(rs.moveToNext()) {
                 upEvent3.setVisibility(View.VISIBLE);
                 eTitle3.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
-                eDate3.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)));
+                eDate3.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", 2026 • ");
                 eTime3.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
             } else {upEvent3.setVisibility(View.GONE);}
             rs.close();
