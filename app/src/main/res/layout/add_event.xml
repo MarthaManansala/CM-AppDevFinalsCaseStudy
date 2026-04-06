@@ -51,18 +51,11 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:padding="5dp">
-        <TextView
-            android:layout_width="110dp"
-            android:layout_height="70dp"
-            android:text="Event Title:"
-            android:textSize="20sp"
-            android:gravity=""
-            android:textColor="@color/black"/>
         <EditText
             android:id="@+id/addEventTitle"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:hint=" ex. Mom's Birthday"
+            android:hint=" Event Title"
             android:textSize="20sp"
             android:inputType="text"
             android:textColor="@color/black"/>
@@ -73,13 +66,6 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:padding="5dp">
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="Time:"
-            android:textSize="20sp"
-            android:gravity=""
-            android:textColor="@color/black"/>
         <EditText
             android:id="@+id/addEventTime"
             android:layout_width="match_parent"
@@ -95,18 +81,11 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:padding="5dp">
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="70dp"
-            android:text="Location:"
-            android:textSize="20sp"
-            android:gravity=""
-            android:textColor="@color/black"/>
         <EditText
             android:id="@+id/addEventLocation"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:hint=" ex. Physical/Online"
+            android:hint=" Location"
             android:textSize="20sp"
             android:inputType="text"
             android:textColor="@color/black"/>
@@ -117,18 +96,11 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:padding="5dp">
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:text="Notes:"
-            android:textSize="20sp"
-            android:gravity=""
-            android:textColor="@color/black"/>
         <EditText
             android:id="@+id/addEventNotes"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:hint=" ex. Give her flowers"
+            android:hint=" Notes"
             android:textSize="20sp"
             android:inputType="text"
             android:textColor="@color/black"/>

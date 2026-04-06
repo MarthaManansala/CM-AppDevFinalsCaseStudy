@@ -3,6 +3,8 @@ package com.mf_manansala.cm_finalscasestudyappdev;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +17,7 @@ public class AddEvent extends Activity {
     Boolean isEditEvent = false;
     String existingEventID = "";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,14 +28,29 @@ public class AddEvent extends Activity {
         EditText addEventTime = findViewById(R.id.addEventTime);
         EditText addEventLocation = findViewById(R.id.addEventLocation);
         EditText addEventNotes = findViewById(R.id.addEventNotes);
-        Button addEventReturn = findViewById(R.id.addEventReturn);
         Button addEventSubmit = findViewById(R.id.addEventSubmit);
 
         isEditEvent = getIntent().getBooleanExtra("editEvent", false);
         existingEventID = getIntent().getStringExtra("eventID");
+        if(isEditEvent) {
+            addEventSubmit.setText("UPDATE EVENT");
+            android.database.Cursor rs = dbHelper.getRecordByID(existingEventID);
 
-        if (isEditEvent) {
-            addEventSubmit.setText("EDIT EVENT");
+            if(rs != null && rs.moveToFirst()) {
+                String eTitle = rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE));
+                String eTime = rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME));
+                String eLocation = rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_LOCATION));
+                String eNotes = rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_NOTES));
+
+                String defaultSLoc = eLocation.replace("Location: ", "");
+                String defaultSNotes = eNotes.replace("Notes: ", "");
+
+                addEventTitle.setText(eTitle);
+                addEventTime.setText(eTime);
+                addEventLocation.setText(defaultSLoc);
+                addEventNotes.setText(defaultSNotes);
+                rs.close();
+            }
         }
 
         addEventPickedDay = findViewById(R.id.addEventPickedDay);
@@ -46,32 +64,33 @@ public class AddEvent extends Activity {
             public void onClick(View v) {
                 String getEventTitle = addEventTitle.getText().toString().trim();
                 String getEventTime = addEventTime.getText().toString().trim();
-                String getEventLocation = addEventLocation.getText().toString().trim();
-                String getEventNotes = addEventNotes.getText().toString().trim();
+                String fixedSLoc = addEventLocation.getText().toString().trim();
+                String fixedSNotes = addEventNotes.getText().toString().trim();
+                String getEventLocation = fixedSLoc.isEmpty() ? "" : "Location: " + fixedSLoc;
+                String getEventNotes = fixedSNotes.isEmpty() ? "" : "Notes: " + fixedSNotes;
 
-                if (getEventTitle.isEmpty()){
+
+                if (getEventTitle.isEmpty()) {
                     addEventTitle.setError("Please enter a title");
                     Toast.makeText(AddEvent.this, "Please enter a title", Toast.LENGTH_SHORT).show();
-                } else if (!getEventTime.matches("^[0-9:PMAMampm ]+$")) {
+                } else if (!getEventTime.matches("^[0-9:PMAamp ]+$")) {
                     addEventTime.setError("Format must be 00:00 AM/PM");
                     Toast.makeText(AddEvent.this, "Format must be 00:00 AM/PM", Toast.LENGTH_SHORT).show();
                 } else {
-                    if (isEditEvent) {    /*TO BE FIXED*/
-                        boolean isUpdatedEvent = dbHelper.editEvent(
+                    if(isEditEvent) {
+                        boolean isUpdated = dbHelper.updateRecord(
                                 existingEventID,
                                 getEventTitle,
-                                month,
-                                day,
                                 getEventTime,
                                 getEventLocation,
                                 getEventNotes
                         );
 
-                        if (isUpdatedEvent) {
-                            Toast.makeText(AddEvent.this, "EVENT UPDATED SUCCESSFULLY!", Toast.LENGTH_SHORT).show();
+                        if(isUpdated){
+                            Toast.makeText(AddEvent.this, "EVENT UPDATED!", Toast.LENGTH_SHORT).show();
                             finish();
                         } else {
-                            Toast.makeText(AddEvent.this, "ERROR ON SAVING EVENT...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddEvent.this, "ERROR ON UPDATING EVENT", Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         boolean isAdded = dbHelper.AddRecord(
@@ -82,7 +101,6 @@ public class AddEvent extends Activity {
                                 getEventLocation,
                                 getEventNotes
                         );
-
                         if (isAdded) {
                             Toast.makeText(AddEvent.this, "EVENT ADDED SUCCESSFULLY!", Toast.LENGTH_SHORT).show();
                             finish();
@@ -94,6 +112,7 @@ public class AddEvent extends Activity {
             }
         });
 
+        Button addEventReturn = findViewById(R.id.addEventReturn);
         addEventReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,3 +121,4 @@ public class AddEvent extends Activity {
         });
     }
 }
+

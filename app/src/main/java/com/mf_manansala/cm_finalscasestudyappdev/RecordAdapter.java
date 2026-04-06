@@ -22,7 +22,7 @@ public class RecordAdapter extends ArrayAdapter<String> {
     public View getView(int position, View convertView, ViewGroup parent){
         if(convertView == null) {
             convertView = LayoutInflater.from(context)
-                    .inflate(R.layout.records_activity, parent, false);
+                    .inflate(R.layout.event_item, parent, false);
         }
 
         TextView txtRecord = convertView.findViewById(R.id.txtRecordData);

@@ -79,12 +79,27 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
         rs = conn.rawQuery(SQL, new String[]{month, String.valueOf(day)});
         if(rs.moveToFirst()){
           do {
-              String entry = rs.getString(rs.getColumnIndexOrThrow(EVENT_ID)) + ". "
-                      + rs.getString(rs.getColumnIndexOrThrow(EVENT_TITLE)) + "\n"
-                      + rs.getString(rs.getColumnIndexOrThrow(EVENT_MONTH)) + " " + rs.getInt(rs.getColumnIndexOrThrow(EVENT_DAY)) + " | " + rs.getString(rs.getColumnIndexOrThrow(EVENT_TIME)) + "\n"
-                      + "Location: " + rs.getString(rs.getColumnIndexOrThrow(EVENT_LOCATION)) + "\n"
-                      + "Notes: " + rs.getString(rs.getColumnIndexOrThrow(EVENT_NOTES));
-              ItemList.add(entry);
+              //String eID = rs.getString(rs.getColumnIndexOrThrow(EVENT_ID));
+              String eTitle = rs.getString(rs.getColumnIndexOrThrow(EVENT_TITLE));
+              String eMonth = rs.getString(rs.getColumnIndexOrThrow(EVENT_MONTH));
+              int eDay = rs.getInt(rs.getColumnIndexOrThrow(EVENT_DAY));
+              String eTime = rs.getString(rs.getColumnIndexOrThrow(EVENT_TIME));
+              String eLoc = rs.getString(rs.getColumnIndexOrThrow(EVENT_LOCATION));
+              String eNotes = rs.getString(rs.getColumnIndexOrThrow(EVENT_NOTES));
+
+              StringBuilder entry = new StringBuilder();
+              entry.append("Event: ").append(eTitle).append("\n");
+              entry.append(eMonth).append(" ").append(eDay).append(" | ").append(eTime);
+
+              if(!eLoc.trim().isEmpty()) {
+                  entry.append("\n").append(eLoc);
+              }
+
+              if(!eNotes.trim().isEmpty()) {
+                  entry.append("\n").append(eNotes);
+              }
+
+              ItemList.add(entry.toString());
           } while (rs.moveToNext());
         }
         rs.close();
@@ -92,56 +107,28 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
         return ItemList;
     }
 
+    public boolean updateRecord(String eventID, String eventTitle, String eventTime, String eventLocation, String eventNotes){
+        android.database.sqlite.SQLiteDatabase conn = getWritableDatabase();
+        VALUES = new ContentValues();
+        VALUES.put(EVENT_TITLE, eventTitle);
+        VALUES.put(EVENT_TIME, eventTime);
+        VALUES.put(EVENT_LOCATION, eventLocation);
+        VALUES.put(EVENT_NOTES, eventNotes);
 
-    /*TO BE FIXED*/
-    public boolean deleteEvent(String eventID) {
-        android.database.sqlite.SQLiteDatabase conn = this.getWritableDatabase();
-        return conn.delete(EVENTS_TABLE, EVENT_ID + "=?", new String[]{eventID}) > 0;
+        int result = conn.update(EVENTS_TABLE, VALUES, EVENT_ID + "=?", new String[]{eventID});
+        return result > 0;
     }
 
-    public boolean editEvent(String eventID, String eventTitle, String eventMonth, Integer eventDay, String eventTime, String eventLocation, String eventNotes){
-        android.database.sqlite.SQLiteDatabase conn = this.getWritableDatabase();
-        long result = -1;
-
-        try {
-            conn.beginTransaction();
-            VALUES = new ContentValues();
-            VALUES.put(EVENT_TITLE, eventTitle);
-            VALUES.put(EVENT_MONTH, eventMonth);
-            VALUES.put(EVENT_DAY, eventDay);
-            VALUES.put(EVENT_TIME, eventTime);
-            VALUES.put(EVENT_LOCATION, eventLocation);
-            VALUES.put(EVENT_NOTES, eventNotes);
-
-            int editedEvent = conn.update(EVENTS_TABLE, VALUES, EVENT_ID + "=?", new String[]{eventID});
-            if (editedEvent > 0) {
-                conn.setTransactionSuccessful();
-                result = 1;
-            }
-        } finally {
-            conn.endTransaction();
-            close();
-        }
-        return result != -1;
-    }
-
-    public ArrayList<String> getAll2026Records() {
+    public Cursor getRecordByID(String eventID){
         android.database.sqlite.SQLiteDatabase conn = this.getReadableDatabase();
-        ItemList = new ArrayList<>();
+        return conn.rawQuery("SELECT * FROM " + EVENTS_TABLE + " WHERE " + EVENT_ID + "=?", new String[]{eventID});
+    }
 
-        String SQL = "SELECT * FROM " + EVENTS_TABLE + " ORDER BY " + EVENT_ID + " DESC ";
-        rs = conn.rawQuery(SQL, null);
-        if(rs.moveToFirst()){
-            do {
-                String entry = rs.getString(rs.getColumnIndexOrThrow(EVENT_ID)) + " | "
-                      + rs.getString(rs.getColumnIndexOrThrow(EVENT_TITLE)) + "\n"
-                      + rs.getString(rs.getColumnIndexOrThrow(EVENT_MONTH)) + " " + rs.getInt(rs.getColumnIndexOrThrow(EVENT_DAY)) + " | " + rs.getString(rs.getColumnIndexOrThrow(EVENT_TIME)) + "\n"
-                      + "Location: " + rs.getString(rs.getColumnIndexOrThrow(EVENT_LOCATION)) + "\n"
-                      + "Notes: " + rs.getString(rs.getColumnIndexOrThrow(EVENT_NOTES));
-                ItemList.add(entry);
-            } while (rs.moveToNext());
-        }
-        rs.close();
-        return ItemList;
+    public boolean deleteRecord(String eventID){
+        android.database.sqlite.SQLiteDatabase conn = this.getWritableDatabase();
+
+        int result = conn.delete(EVENTS_TABLE, EVENT_ID + "=?", new String[]{eventID});
+        conn.close();
+        return result > 0;
     }
 }

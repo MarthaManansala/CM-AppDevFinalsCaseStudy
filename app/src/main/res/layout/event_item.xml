@@ -23,7 +23,7 @@
             android:textColor="@color/black"
             android:textSize="22.5sp"
             android:fontFamily="sans-serif-condensed"
-            android:lineSpacingExtra="4dp" />
+            android:lineSpacingExtra="4dp"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

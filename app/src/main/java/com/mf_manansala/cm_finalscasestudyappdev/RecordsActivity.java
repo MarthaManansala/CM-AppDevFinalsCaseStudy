@@ -23,8 +23,6 @@ public class RecordsActivity extends ListActivity {
         int day = getIntent().getIntExtra("PickedDay", 0);
 
         dbHelper = new SQLiteDatabaseHelper(this);
-        Conn = dbHelper.getWritableDatabase();
-        ItemList = dbHelper.getAll2026Records();
         ItemList = dbHelper.getAllRecords(month, day);
 
         if (ItemList != null && !ItemList.isEmpty()) {
@@ -36,30 +34,35 @@ public class RecordsActivity extends ListActivity {
         }
     }
 
-
-    /*TO BE FIXED (EDIT AND DELETE EVENT)*/
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
 
-        String fullText = ItemList.get(position);
-        String eventID = fullText.split(" \\|")[0];
+        boolean isEditMode = getIntent().getBooleanExtra("isEditMode", false);
+        boolean isDeleteMode = getIntent().getBooleanExtra("isDeleteMode", false);
+        String fullRecord = ItemList.get(position);
+        String eventID = fullRecord.split("\\.")[0];
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(eventID);
-        builder.setItems(new CharSequence[]{"Edit Event", "Delete Event"}, (dialog, which) -> {
-            if(which == 0) {
-                intent = new Intent(this, AddEvent.class);
-                intent.putExtra("editEvent", true);
-                intent.putExtra("eventID", eventID);
-                startActivity(intent);
-            } else {
-                if(dbHelper.deleteEvent(eventID)){
-                    Toast.makeText(this, "EVENT DELETED!", Toast.LENGTH_SHORT).show();
-                    recreate();
-                }
-            }
-        });
-        builder.show();
+        if(isEditMode) {
+            intent = new Intent(RecordsActivity.this, AddEvent.class);
+            intent.putExtra("eventID", eventID);
+            intent.putExtra("editEvent", true);
+            intent.putExtra("PickedMonth", getIntent().getStringExtra("PickedMonth"));
+            intent.putExtra("PickedDay", getIntent().getIntExtra("PickedDay", 0));
+            startActivity(intent);
+            finish();
+        } else if(isDeleteMode) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Confirm Delete")
+                    .setMessage("Are you sure you want to delete this event?")
+                    .setPositiveButton("Yes", (dialog, which) -> {
+                        if(dbHelper.deleteRecord(eventID)) {
+                            Toast.makeText(this, "EVENT DELETED!", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
+        }
     }
 }

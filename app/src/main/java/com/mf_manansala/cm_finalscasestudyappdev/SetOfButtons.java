@@ -41,7 +41,7 @@ public class SetOfButtons extends Activity {
         btnViewEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SetOfButtons.this, RecordsActivity.class);
+                intent = new Intent(SetOfButtons.this, RecordsActivity.class);
                 intent.putExtra("PickedMonth", month);
                 intent.putExtra("PickedDay", day);
                 startActivity(intent);
@@ -52,7 +52,11 @@ public class SetOfButtons extends Activity {
         btnEditEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* Edit Events Function */
+                intent = new Intent(SetOfButtons.this, RecordsActivity.class);
+                intent.putExtra("PickedMonth", month);
+                intent.putExtra("PickedDay", day);
+                intent.putExtra("isEditMode", true);
+                startActivity(intent);
             }
         });
 
@@ -60,7 +64,11 @@ public class SetOfButtons extends Activity {
         btnDeleteEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* Delete Events Function */
+                intent = new Intent(SetOfButtons.this, RecordsActivity.class);
+                intent.putExtra("PickedMonth", month);
+                intent.putExtra("PickedDay", day);
+                intent.putExtra("isDeleteMode", true);
+                startActivity(intent);
             }
         });
 
