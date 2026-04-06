@@ -79,7 +79,7 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
         rs = conn.rawQuery(SQL, new String[]{month, String.valueOf(day)});
         if(rs.moveToFirst()){
           do {
-              //String eID = rs.getString(rs.getColumnIndexOrThrow(EVENT_ID));
+              String eID = rs.getString(rs.getColumnIndexOrThrow(EVENT_ID));
               String eTitle = rs.getString(rs.getColumnIndexOrThrow(EVENT_TITLE));
               String eMonth = rs.getString(rs.getColumnIndexOrThrow(EVENT_MONTH));
               int eDay = rs.getInt(rs.getColumnIndexOrThrow(EVENT_DAY));
@@ -88,7 +88,7 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
               String eNotes = rs.getString(rs.getColumnIndexOrThrow(EVENT_NOTES));
 
               StringBuilder entry = new StringBuilder();
-              entry.append("Event: ").append(eTitle).append("\n");
+              entry.append(eID).append(". ").append(eTitle).append("\n");
               entry.append(eMonth).append(" ").append(eDay).append(" | ").append(eTime);
 
               if(!eLoc.trim().isEmpty()) {
@@ -130,5 +130,48 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
         int result = conn.delete(EVENTS_TABLE, EVENT_ID + "=?", new String[]{eventID});
         conn.close();
         return result > 0;
+    }
+
+    public ArrayList<String> getAll2026Records(){
+        android.database.sqlite.SQLiteDatabase conn = this.getReadableDatabase();
+        ItemList = new ArrayList<>();
+
+        String SQL = "SELECT * FROM " + EVENTS_TABLE + " ORDER BY " + EVENT_ID + " ASC";
+
+        rs = conn.rawQuery(SQL, null);
+        if(rs.moveToFirst()){
+            do {
+                String eID = rs.getString(rs.getColumnIndexOrThrow(EVENT_ID));
+                  String eTitle = rs.getString(rs.getColumnIndexOrThrow(EVENT_TITLE));
+                  String eMonth = rs.getString(rs.getColumnIndexOrThrow(EVENT_MONTH));
+                  int eDay = rs.getInt(rs.getColumnIndexOrThrow(EVENT_DAY));
+                  String eTime = rs.getString(rs.getColumnIndexOrThrow(EVENT_TIME));
+                  String eLoc = rs.getString(rs.getColumnIndexOrThrow(EVENT_LOCATION));
+                  String eNotes = rs.getString(rs.getColumnIndexOrThrow(EVENT_NOTES));
+
+                  StringBuilder entry = new StringBuilder();
+                  entry.append(eID).append(". ").append(eTitle).append("\n");
+                  entry.append(eMonth).append(" ").append(eDay).append(" | ").append(eTime);
+
+                  if(!eLoc.trim().isEmpty()) {
+                      entry.append("\n").append(eLoc);
+                  }
+                  if(!eNotes.trim().isEmpty()) {
+                      entry.append("\n").append(eNotes);
+                  } ItemList.add(entry.toString());
+            } while (rs.moveToNext());
+        }
+        rs.close();
+        conn.close();
+        return ItemList;
+    }
+
+    public Cursor getUpcomingEvents(String currentMonth, int currentDay) {
+        android.database.sqlite.SQLiteDatabase conn = this.getReadableDatabase();
+
+        String SQL = "SELECT * FROM " + EVENTS_TABLE + " WHERE " + EVENT_MONTH + " =? AND " + EVENT_DAY + " >= ?"
+                + " ORDER BY " + EVENT_DAY + " ASC LIMIT 3";
+
+        return conn.rawQuery(SQL, new String[]{currentMonth, String.valueOf(currentDay)});
     }
 }
