@@ -104,7 +104,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button android:id="@+id/april19btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d19" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
-        <Button android:id="@+id/april20btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d19" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
+        <Button android:id="@+id/april20btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d20" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
         <Button android:id="@+id/april21btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d21" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
         <Button android:id="@+id/april22btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d22" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>
         <Button android:id="@+id/april23btn" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:text="@string/d23" android:background="?android:attr/selectableItemBackground" android:textColor="@color/black"/>

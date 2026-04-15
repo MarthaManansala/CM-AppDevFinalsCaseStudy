@@ -198,11 +198,12 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
 
     private void insertHoliday(android.database.sqlite.SQLiteDatabase db, String title, String month, int day){
         VALUES = new ContentValues();
-        VALUES.put(EVENT_TITLE, "Holiday: " + title);
+        VALUES.put(EVENT_TITLE, title);
         VALUES.put(EVENT_MONTH, month);
         VALUES.put(EVENT_DAY, day);
         VALUES.put(EVENT_TIME, "Whole Day");
         VALUES.put(EVENT_LOCATION, "Philippines");
+        VALUES.put(EVENT_NOTES, "National Holiday");
         db.insert(EVENTS_TABLE, null, VALUES);
     }
 }
