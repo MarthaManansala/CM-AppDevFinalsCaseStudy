@@ -17,50 +17,21 @@ import java.util.Locale;
 
 public class HomePage extends Activity {
     Intent intent;
+    SQLiteDatabaseHelper dbHelper;
+    TextView eTitle1, eDate1, eTime1, eTitle2, eDate2, eTime2, eTitle3, eDate3, eTime3;
+    View upEvent2, upEvent3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
 
-        View upEvent2 = findViewById(R.id.upEvent2); View upEvent3 = findViewById(R.id.upEvent3);
-        TextView eTitle1 = findViewById(R.id.eTitle1); TextView eDate1 = findViewById(R.id.eDate1); TextView eTime1 = findViewById(R.id.eTime1);
-        TextView eTitle2 = findViewById(R.id.eTitle2); TextView eDate2 = findViewById(R.id.eDate2); TextView eTime2 = findViewById(R.id.eTime2);
-        TextView eTitle3 = findViewById(R.id.eTitle3); TextView eDate3 = findViewById(R.id.eDate3); TextView eTime3 = findViewById(R.id.eTime3);
+        upEvent2 = findViewById(R.id.upEvent2); upEvent3 = findViewById(R.id.upEvent3);
+        eTitle1 = findViewById(R.id.eTitle1); eDate1 = findViewById(R.id.eDate1); eTime1 = findViewById(R.id.eTime1);
+        eTitle2 = findViewById(R.id.eTitle2); eDate2 = findViewById(R.id.eDate2); eTime2 = findViewById(R.id.eTime2);
+        eTitle3 = findViewById(R.id.eTitle3); eDate3 = findViewById(R.id.eDate3); eTime3 = findViewById(R.id.eTime3);
 
-        SQLiteDatabaseHelper dbHelper = new SQLiteDatabaseHelper(this);
-
-        Calendar calendar = Calendar.getInstance();
-        String currentMonth = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
-        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
-
-        Cursor rs = dbHelper.getUpcomingEvents(currentMonth, currentDay);
-        if(rs != null && rs.moveToFirst()) {
-            eTitle1.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
-            eDate1.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", 2026 • ");
-            eTime1.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
-
-            if(rs.moveToNext()) {
-                upEvent2.setVisibility(View.VISIBLE);
-                eTitle2.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
-                eDate2.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", 2026 • ");
-                eTime2.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
-            } else {upEvent2.setVisibility(View.GONE);}
-
-            if(rs.moveToNext()) {
-                upEvent3.setVisibility(View.VISIBLE);
-                eTitle3.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
-                eDate3.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", 2026 • ");
-                eTime3.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
-            } else {upEvent3.setVisibility(View.GONE);}
-            rs.close();
-        } else {
-            eTitle1.setText("No Upcoming Events!");
-            eDate1.setText("");
-            eTime2.setText("");
-            upEvent2.setVisibility(View.GONE);
-            upEvent3.setVisibility(View.GONE);
-        }
+        dbHelper = new SQLiteDatabaseHelper(this);
 
         Button btnViewFullCalendar = findViewById(R.id.btnViewFullCalendar);
         btnViewFullCalendar.setOnClickListener(new View.OnClickListener() {
@@ -179,5 +150,50 @@ public class HomePage extends Activity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        refreshUpcomingEvents();
+    }
+
+    private void refreshUpcomingEvents() {
+        Calendar calendar = Calendar.getInstance();
+        String currentMonth = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+
+        Cursor rs = dbHelper.getUpcomingEvents(currentMonth, currentDay);
+
+        if (rs != null && rs.moveToFirst()) {
+            eTitle1.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
+            eDate1.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", 2026 • ");
+            eTime1.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
+
+            if (rs.moveToNext()) {
+                upEvent2.setVisibility(View.VISIBLE);
+                eTitle2.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
+                eDate2.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)));
+                eTime2.setText(", 2026 • " + rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
+            } else {
+                upEvent2.setVisibility(View.GONE);
+            }
+
+            if (rs.moveToNext()) {
+                upEvent3.setVisibility(View.VISIBLE);
+                eTitle3.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
+                eDate3.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)));
+                eTime3.setText(", 2026 • " + rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
+            } else {
+                upEvent3.setVisibility(View.GONE);
+            }
+            rs.close();
+        } else {
+            eTitle1.setText("No Upcoming Events!");
+            eDate1.setText("");
+            eTime1.setText("");
+            upEvent2.setVisibility(View.GONE);
+            upEvent3.setVisibility(View.GONE);
+        }
     }
 }
