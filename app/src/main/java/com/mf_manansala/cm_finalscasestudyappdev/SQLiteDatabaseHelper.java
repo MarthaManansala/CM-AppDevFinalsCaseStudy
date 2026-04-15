@@ -37,6 +37,27 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
                + EVENT_LOCATION + " TEXT , "
                + EVENT_NOTES + " TEXT)";
        conn.execSQL(SQLEventRecords);
+
+        insertHoliday(conn, "New Year's Day", "January", 1);
+        insertHoliday(conn, "Chinese New Year", "February", 17);
+        insertHoliday(conn, "EDSA People Power Revolution", "February", 25);
+        insertHoliday(conn, "Eid'l Fitr", "March", 20);
+        insertHoliday(conn, "Maundy Thursday", "April", 2);
+        insertHoliday(conn, "Good Friday", "April", 3);
+        insertHoliday(conn, "Black Saturday", "April", 4);
+        insertHoliday(conn, "Araw ng Kagitingan (Day of Valor)", "April", 9);
+        insertHoliday(conn, "Labor Day", "May", 1);
+        insertHoliday(conn, "Independence Day", "June", 12);
+        insertHoliday(conn, "Ninoy Aquino Day", "August", 21);
+        insertHoliday(conn, "National Heroes Day", "August", 31);
+        insertHoliday(conn, "All Saints' Day", "November", 1);
+        insertHoliday(conn, "All Souls' Day", "November", 2);
+        insertHoliday(conn, "Bonifacio Day", "November", 30);
+        insertHoliday(conn, "Feast of the Immaculate Conception", "December", 8);
+        insertHoliday(conn, "Christmas Eve", "December", 24);
+        insertHoliday(conn, "Christmas Day", "December", 25);
+        insertHoliday(conn, "Rizal Day", "December", 30);
+        insertHoliday(conn, "New Year's Eve", "December", 31);
     }
 
     @Override
@@ -173,5 +194,15 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
                 + " ORDER BY " + EVENT_DAY + " ASC LIMIT 3";
 
         return conn.rawQuery(SQL, new String[]{currentMonth, String.valueOf(currentDay)});
+    }
+
+    private void insertHoliday(android.database.sqlite.SQLiteDatabase db, String title, String month, int day){
+        VALUES = new ContentValues();
+        VALUES.put(EVENT_TITLE, "Holiday: " + title);
+        VALUES.put(EVENT_MONTH, month);
+        VALUES.put(EVENT_DAY, day);
+        VALUES.put(EVENT_TIME, "Whole Day");
+        VALUES.put(EVENT_LOCATION, "Philippines");
+        db.insert(EVENTS_TABLE, null, VALUES);
     }
 }
