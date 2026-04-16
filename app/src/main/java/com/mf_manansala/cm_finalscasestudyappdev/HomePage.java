@@ -15,6 +15,7 @@ public class HomePage extends Activity {
     Intent intent;
     SQLiteDatabaseHelper dbHelper;
     TextView eTitle1, eDate1, eTime1, eTitle2, eDate2, eTime2, eTitle3, eDate3, eTime3;
+    Button btnJumpJan, btnJumpFeb, btnJumpMar, btnJumpApr, btnJumpMay, btnJumpJune, btnJumpJuly, btnJumpAug, btnJumpSept, btnJumpOct, btnJumpNov, btnJumpDec;
     View upEvent2, upEvent3;
 
     @Override
@@ -39,7 +40,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpJan = findViewById(R.id.btnJumpJan);
+        btnJumpJan = findViewById(R.id.btnJumpJan);
         btnJumpJan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +49,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpFeb = findViewById(R.id.btnJumpFeb);
+        btnJumpFeb = findViewById(R.id.btnJumpFeb);
         btnJumpFeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +58,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpMar = findViewById(R.id.btnJumpMar);
+        btnJumpMar = findViewById(R.id.btnJumpMar);
         btnJumpMar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +67,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpApr = findViewById(R.id.btnJumpApr);
+        btnJumpApr = findViewById(R.id.btnJumpApr);
         btnJumpApr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +76,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpMay = findViewById(R.id.btnJumpMay);
+        btnJumpMay = findViewById(R.id.btnJumpMay);
         btnJumpMay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +85,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpJune = findViewById(R.id.btnJumpJune);
+        btnJumpJune = findViewById(R.id.btnJumpJune);
         btnJumpJune.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,7 +94,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpJuly = findViewById(R.id.btnJumpJuly);
+        btnJumpJuly = findViewById(R.id.btnJumpJuly);
         btnJumpJuly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +103,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpAug = findViewById(R.id.btnJumpAug);
+        btnJumpAug = findViewById(R.id.btnJumpAug);
         btnJumpAug.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,7 +112,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpSept = findViewById(R.id.btnJumpSept);
+        btnJumpSept = findViewById(R.id.btnJumpSept);
         btnJumpSept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,7 +121,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpOct = findViewById(R.id.btnJumpOct);
+        btnJumpOct = findViewById(R.id.btnJumpOct);
         btnJumpOct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,7 +130,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpNov = findViewById(R.id.btnJumpNov);
+        btnJumpNov = findViewById(R.id.btnJumpNov);
         btnJumpNov.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -138,7 +139,7 @@ public class HomePage extends Activity {
             }
         });
 
-        Button btnJumpDec = findViewById(R.id.btnJumpDec);
+        btnJumpDec = findViewById(R.id.btnJumpDec);
         btnJumpDec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -146,6 +147,42 @@ public class HomePage extends Activity {
                 startActivity(intent);
             }
         });
+
+        View.OnClickListener monthListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Class targetActivity = null;
+                if (v.getId() == R.id.btnJumpJan) targetActivity = MainActivity.class;
+                else if (v.getId() == R.id.btnJumpFeb) targetActivity = February.class;
+                else if (v.getId() == R.id.btnJumpMar) targetActivity = March.class;
+                else if (v.getId() == R.id.btnJumpApr) targetActivity = April.class;
+                else if (v.getId() == R.id.btnJumpMay) targetActivity = May.class;
+                else if (v.getId() == R.id.btnJumpJune) targetActivity = June.class;
+                else if (v.getId() == R.id.btnJumpJuly) targetActivity = July.class;
+                else if (v.getId() == R.id.btnJumpAug) targetActivity = August.class;
+                else if (v.getId() == R.id.btnJumpSept) targetActivity = September.class;
+                else if (v.getId() == R.id.btnJumpOct) targetActivity = October.class;
+                else if (v.getId() == R.id.btnJumpNov) targetActivity = November.class;
+                else if (v.getId() == R.id.btnJumpDec) targetActivity = December.class;
+
+                if (targetActivity != null) {
+                startActivity(new Intent(HomePage.this, targetActivity));
+                }
+            }
+        };
+
+        btnJumpJan.setOnClickListener(monthListener);
+        btnJumpFeb.setOnClickListener(monthListener);
+        btnJumpMar.setOnClickListener(monthListener);
+        btnJumpApr.setOnClickListener(monthListener);
+        btnJumpMay.setOnClickListener(monthListener);
+        btnJumpJune.setOnClickListener(monthListener);
+        btnJumpJuly.setOnClickListener(monthListener);
+        btnJumpAug.setOnClickListener(monthListener);
+        btnJumpSept.setOnClickListener(monthListener);
+        btnJumpOct.setOnClickListener(monthListener);
+        btnJumpNov.setOnClickListener(monthListener);
+        btnJumpDec.setOnClickListener(monthListener);
     }
 
     @Override
@@ -156,21 +193,24 @@ public class HomePage extends Activity {
 
     private void refreshUpcomingEvents() {
         Calendar calendar = Calendar.getInstance();
+        int  currentYear = calendar.get(Calendar.YEAR);
+        TextView welcomeText = findViewById(R.id.welcomeText);
+        welcomeText.setText("Welcome to " + currentYear);
         String currentMonth = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
         int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
 
-        Cursor rs = dbHelper.getUpcomingEvents(currentMonth, currentDay);
+        Cursor rs = dbHelper.getUpcomingEvents(currentYear, currentMonth, currentDay);
 
         if (rs != null && rs.moveToFirst()) {
             eTitle1.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
-            eDate1.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", 2026 • ");
+            eDate1.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", " + currentYear + " • ");
             eTime1.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
 
             if (rs.moveToNext()) {
                 upEvent2.setVisibility(View.VISIBLE);
                 eTitle2.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
-                eDate2.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)));
-                eTime2.setText(", 2026 • " + rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
+                eDate2.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", " + currentYear + " • ");
+                eTime2.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
             } else {
                 upEvent2.setVisibility(View.GONE);
             }
@@ -178,8 +218,8 @@ public class HomePage extends Activity {
             if (rs.moveToNext()) {
                 upEvent3.setVisibility(View.VISIBLE);
                 eTitle3.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TITLE)));
-                eDate3.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)));
-                eTime3.setText(", 2026 • " + rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
+                eDate3.setText(currentMonth + " " + rs.getInt(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_DAY)) + ", " + currentYear + " • ");
+                eTime3.setText(rs.getString(rs.getColumnIndexOrThrow(SQLiteDatabaseHelper.EVENT_TIME)));
             } else {
                 upEvent3.setVisibility(View.GONE);
             }

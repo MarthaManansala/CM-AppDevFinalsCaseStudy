@@ -12,6 +12,7 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
     static final String EVENTS_TABLE="events_info"; //table name
     static final String EVENT_ID="event_id"; //column, primary key
     static final String EVENT_TITLE="event_title"; //column
+    static final String EVENT_YEAR="event_year"; //column
     static final String EVENT_MONTH="event_month"; //column
     static final String EVENT_DAY="event_day"; //column
     static final String EVENT_TIME="event_time"; //column
@@ -22,7 +23,7 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
     Cursor rs;
 
     public SQLiteDatabaseHelper(Context context){
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 3);
     }
 
     @Override
@@ -30,6 +31,7 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
        String SQLEventRecords = "CREATE TABLE " + EVENTS_TABLE + " ("
                + EVENT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT , "
                + EVENT_TITLE + " TEXT , "
+               + EVENT_YEAR + " INTEGER , "
                + EVENT_MONTH + " TEXT , "
                + EVENT_DAY + " INTEGER , "
                + EVENT_TIME + " TEXT , "
@@ -65,7 +67,7 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
         onCreate(conn);
     }
 
-    public boolean AddRecord(String eventTitle, String eventMonth, int eventDay, String eventTime, String eventLoc, String eventNotes){
+    public boolean AddRecord(String eventTitle, int eventYear, String eventMonth, int eventDay, String eventTime, String eventLoc, String eventNotes){
         android.database.sqlite.SQLiteDatabase conn = this.getWritableDatabase();
         long result;
 
@@ -73,6 +75,7 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
             conn.beginTransaction();
             VALUES = new ContentValues();
             VALUES.put(EVENT_TITLE, eventTitle);
+            VALUES.put(EVENT_YEAR, eventYear);
             VALUES.put(EVENT_MONTH, eventMonth);
             VALUES.put(EVENT_DAY, eventDay);
             VALUES.put(EVENT_TIME, eventTime);
@@ -186,18 +189,21 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
         return ItemList;
     }
 
-    public Cursor getUpcomingEvents(String currentMonth, int currentDay) {
+    public Cursor getUpcomingEvents(int year, String currentMonth, int currentDay) {
         android.database.sqlite.SQLiteDatabase conn = this.getReadableDatabase();
 
-        String SQL = "SELECT * FROM " + EVENTS_TABLE + " WHERE " + EVENT_MONTH + " =? AND " + EVENT_DAY + " >= ?"
-                + " ORDER BY " + EVENT_DAY + " ASC LIMIT 3";
+        String SQL = "SELECT * FROM " + EVENTS_TABLE +
+                 " WHERE (" + EVENT_YEAR + "=? OR " + EVENT_YEAR + "=0) " +
+                 "AND " + EVENT_MONTH + " =? AND " + EVENT_DAY + " >= ?" +
+                 " ORDER BY " + EVENT_DAY + " ASC LIMIT 3";
 
-        return conn.rawQuery(SQL, new String[]{currentMonth, String.valueOf(currentDay)});
+        return conn.rawQuery(SQL, new String[]{String.valueOf(year), currentMonth, String.valueOf(currentDay)});
     }
 
     private void insertHoliday(android.database.sqlite.SQLiteDatabase db, String title, String month, int day){
         VALUES = new ContentValues();
         VALUES.put(EVENT_TITLE, title);
+        VALUES.put(EVENT_YEAR, 0);
         VALUES.put(EVENT_MONTH, month);
         VALUES.put(EVENT_DAY, day);
         VALUES.put(EVENT_TIME, "Whole Day");

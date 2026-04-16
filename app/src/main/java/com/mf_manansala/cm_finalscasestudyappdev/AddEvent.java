@@ -1,15 +1,14 @@
 package com.mf_manansala.cm_finalscasestudyappdev;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class AddEvent extends Activity {
     SQLiteDatabaseHelper dbHelper;
@@ -56,7 +55,9 @@ public class AddEvent extends Activity {
         addEventPickedDay = findViewById(R.id.addEventPickedDay);
         String month = getIntent().getStringExtra("PickedMonth");
         int day = getIntent().getIntExtra("PickedDay", 0);
-        String formattedDate = getString(R.string.date_display_format, month, day);
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        String formattedDate = month + " " + day + ", " + year;
         addEventPickedDay.setText(formattedDate);
 
         addEventSubmit.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +96,7 @@ public class AddEvent extends Activity {
                     } else {
                         boolean isAdded = dbHelper.AddRecord(
                                 getEventTitle,
+                                year,
                                 month,
                                 day,
                                 getEventTime,
