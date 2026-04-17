@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import java.util.Calendar;
 
 public class November extends Activity {
-
     Intent intent;
 
     @Override
@@ -15,11 +15,14 @@ public class November extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.november);
 
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+
         Button d1 = findViewById(R.id.nov1btn);
         d1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 1);
                 startActivity(intent);
@@ -31,6 +34,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 2);
                 startActivity(intent);
@@ -42,6 +46,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 3);
                 startActivity(intent);
@@ -53,6 +58,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 4);
                 startActivity(intent);
@@ -64,6 +70,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 5);
                 startActivity(intent);
@@ -75,6 +82,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 6);
                 startActivity(intent);
@@ -86,6 +94,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 7);
                 startActivity(intent);
@@ -97,6 +106,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 8);
                 startActivity(intent);
@@ -108,6 +118,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 9);
                 startActivity(intent);
@@ -119,6 +130,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 10);
                 startActivity(intent);
@@ -130,6 +142,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 11);
                 startActivity(intent);
@@ -141,6 +154,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 12);
                 startActivity(intent);
@@ -152,6 +166,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 13);
                 startActivity(intent);
@@ -163,6 +178,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 14);
                 startActivity(intent);
@@ -174,6 +190,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 15);
                 startActivity(intent);
@@ -185,6 +202,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 16);
                 startActivity(intent);
@@ -196,6 +214,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 17);
                 startActivity(intent);
@@ -207,6 +226,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 18);
                 startActivity(intent);
@@ -218,6 +238,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 19);
                 startActivity(intent);
@@ -229,6 +250,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 20);
                 startActivity(intent);
@@ -240,6 +262,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 21);
                 startActivity(intent);
@@ -251,6 +274,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 22);
                 startActivity(intent);
@@ -262,6 +286,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 23);
                 startActivity(intent);
@@ -273,6 +298,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 24);
                 startActivity(intent);
@@ -284,6 +310,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 25);
                 startActivity(intent);
@@ -295,6 +322,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 26);
                 startActivity(intent);
@@ -306,6 +334,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 27);
                 startActivity(intent);
@@ -317,6 +346,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 28);
                 startActivity(intent);
@@ -328,6 +358,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 29);
                 startActivity(intent);
@@ -339,6 +370,7 @@ public class November extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(November.this, SetOfButtons.class);
+                intent.putExtra("PickedYear", currentYear);
                 intent.putExtra("PickedMonth", "November");
                 intent.putExtra("PickedDay", 30);
                 startActivity(intent);
@@ -362,6 +394,5 @@ public class November extends Activity {
                 startActivity(intent);
             }
         });
-
     }
 }

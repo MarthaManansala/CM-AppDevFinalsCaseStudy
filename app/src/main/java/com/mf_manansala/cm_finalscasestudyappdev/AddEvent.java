@@ -55,8 +55,7 @@ public class AddEvent extends Activity {
         addEventPickedDay = findViewById(R.id.addEventPickedDay);
         String month = getIntent().getStringExtra("PickedMonth");
         int day = getIntent().getIntExtra("PickedDay", 0);
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
+        int year = getIntent().getIntExtra("PickedYear", Calendar.getInstance().get(Calendar.YEAR));
         String formattedDate = month + " " + day + ", " + year;
         addEventPickedDay.setText(formattedDate);
 
@@ -86,7 +85,6 @@ public class AddEvent extends Activity {
                                 getEventLocation,
                                 getEventNotes
                         );
-
                         if(isUpdated){
                             Toast.makeText(AddEvent.this, "EVENT UPDATED!", Toast.LENGTH_SHORT).show();
                             finish();
@@ -123,4 +121,3 @@ public class AddEvent extends Activity {
         });
     }
 }
-

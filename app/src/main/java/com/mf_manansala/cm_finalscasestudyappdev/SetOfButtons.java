@@ -7,10 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Calendar;
-
 public class SetOfButtons extends Activity {
-
     Button btnAddEvent, btnViewEvent, btnEditEvent, btnDeleteEvent, btnReturn;
     TextView txtSelectedMonthAndDay;
     Intent intent;
@@ -21,9 +18,11 @@ public class SetOfButtons extends Activity {
         setContentView(R.layout.set_of_buttons);
 
         txtSelectedMonthAndDay = findViewById(R.id.txtSelectedMonthAndDay);
+        int year = getIntent().getIntExtra("PickedYear", 0);
         String month = getIntent().getStringExtra("PickedMonth");
         int day = getIntent().getIntExtra("PickedDay", 0);
-        String formattedDate = getString(R.string.date_display_format, month, day);
+
+        String formattedDate = month + " " + day + ", " + year;
         txtSelectedMonthAndDay.setText(formattedDate);
 
         btnAddEvent = findViewById(R.id.btnAddEvent);
@@ -31,8 +30,7 @@ public class SetOfButtons extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(SetOfButtons.this, AddEvent.class);
-                String month = getIntent().getStringExtra("PickedMonth");
-                int day = getIntent().getIntExtra("PickedDay", 0);
+                intent.putExtra("PickedYear", year);
                 intent.putExtra("PickedMonth", month);
                 intent.putExtra("PickedDay", day);
                 startActivity(intent);
@@ -44,6 +42,7 @@ public class SetOfButtons extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(SetOfButtons.this, RecordsActivity.class);
+                intent.putExtra("PickedYear", year);
                 intent.putExtra("PickedMonth", month);
                 intent.putExtra("PickedDay", day);
                 startActivity(intent);
@@ -55,6 +54,7 @@ public class SetOfButtons extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(SetOfButtons.this, RecordsActivity.class);
+                intent.putExtra("PickedYear", year);
                 intent.putExtra("PickedMonth", month);
                 intent.putExtra("PickedDay", day);
                 intent.putExtra("isEditMode", true);
@@ -67,6 +67,7 @@ public class SetOfButtons extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(SetOfButtons.this, RecordsActivity.class);
+                intent.putExtra("PickedYear", year);
                 intent.putExtra("PickedMonth", month);
                 intent.putExtra("PickedDay", day);
                 intent.putExtra("isDeleteMode", true);

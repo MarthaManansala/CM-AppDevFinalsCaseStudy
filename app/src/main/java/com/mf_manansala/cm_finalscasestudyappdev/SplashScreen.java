@@ -1,6 +1,5 @@
 package com.mf_manansala.cm_finalscasestudyappdev;
 
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;

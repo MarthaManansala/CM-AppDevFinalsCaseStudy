@@ -134,5 +134,4 @@
             android:fontFamily="@font/poppins_medium"
             android:layout_marginStart="8dp" />
     </LinearLayout>
-
 </LinearLayout>

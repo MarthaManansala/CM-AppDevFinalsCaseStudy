@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import java.util.ArrayList;
 
 public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
@@ -94,12 +93,12 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    public ArrayList<String> getAllRecords(String month, int day){
+    public ArrayList<String> getAllRecords(int year, String month, int day){
         android.database.sqlite.SQLiteDatabase conn = this.getReadableDatabase();
         ItemList = new ArrayList<>();
-        String SQL = "SELECT * FROM " + EVENTS_TABLE + " WHERE " + EVENT_MONTH + "=? AND " + EVENT_DAY + "=?";
+        String SQL = "SELECT * FROM " + EVENTS_TABLE + " WHERE (" + EVENT_YEAR + "=? OR " + EVENT_YEAR + "=0) AND " + EVENT_MONTH + "=? AND " + EVENT_DAY + "=?";
+        rs = conn.rawQuery(SQL, new String[]{String.valueOf(year), month, String.valueOf(day)});
 
-        rs = conn.rawQuery(SQL, new String[]{month, String.valueOf(day)});
         if(rs.moveToFirst()){
           do {
               String eID = rs.getString(rs.getColumnIndexOrThrow(EVENT_ID));
@@ -155,13 +154,12 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
         return result > 0;
     }
 
-    public ArrayList<String> getAll2026Records(){
+    public ArrayList<String> getAllRecordsByYear(int year){
         android.database.sqlite.SQLiteDatabase conn = this.getReadableDatabase();
+        String SQL = "SELECT * FROM " + EVENTS_TABLE + " WHERE " + EVENT_YEAR + "=? OR " + EVENT_YEAR + "=0 ORDER BY " + EVENT_MONTH + " ASC, " + EVENT_DAY + " ASC";
+
         ItemList = new ArrayList<>();
-
-        String SQL = "SELECT * FROM " + EVENTS_TABLE + " ORDER BY " + EVENT_ID + " ASC";
-
-        rs = conn.rawQuery(SQL, null);
+        rs = conn.rawQuery(SQL, new String[]{String.valueOf(year)});
         if(rs.moveToFirst()){
             do {
                 String eID = rs.getString(rs.getColumnIndexOrThrow(EVENT_ID));
@@ -193,9 +191,9 @@ public class SQLiteDatabaseHelper extends SQLiteOpenHelper {
         android.database.sqlite.SQLiteDatabase conn = this.getReadableDatabase();
 
         String SQL = "SELECT * FROM " + EVENTS_TABLE +
-                 " WHERE (" + EVENT_YEAR + "=? OR " + EVENT_YEAR + "=0) " +
-                 "AND " + EVENT_MONTH + " =? AND " + EVENT_DAY + " >= ?" +
-                 " ORDER BY " + EVENT_DAY + " ASC LIMIT 3";
+                     " WHERE (" + EVENT_YEAR + "=? OR " + EVENT_YEAR + "=0) " +
+                     "AND " + EVENT_MONTH + " =? AND " + EVENT_DAY + " >= ?" +
+                     " ORDER BY " + EVENT_DAY + " ASC LIMIT 3";
 
         return conn.rawQuery(SQL, new String[]{String.valueOf(year), currentMonth, String.valueOf(currentDay)});
     }

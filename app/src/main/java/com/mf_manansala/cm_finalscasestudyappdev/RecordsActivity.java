@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class RecordsActivity extends ListActivity {
     SQLiteDatabaseHelper dbHelper;
@@ -19,14 +20,15 @@ public class RecordsActivity extends ListActivity {
         super.onCreate(savedInstanceState);
 
         dbHelper = new SQLiteDatabaseHelper(this);
-        boolean viewAll2026Records = getIntent().getBooleanExtra("viewAll2026Records", false);
+        int PickedYear = getIntent().getIntExtra("PickedYear", Calendar.getInstance().get(Calendar.YEAR));
+        boolean viewAllRecordsByYear = getIntent().getBooleanExtra("viewAllRecordsByYear", false);
 
-        if(viewAll2026Records) {
-            ItemList = dbHelper.getAll2026Records();
+        if(viewAllRecordsByYear) {
+            ItemList = dbHelper.getAllRecordsByYear(PickedYear);
         } else {
             String pickedMonth = getIntent().getStringExtra("PickedMonth");
             int pickedDay = getIntent().getIntExtra("PickedDay", 0);
-            ItemList = dbHelper.getAllRecords(pickedMonth, pickedDay);
+            ItemList = dbHelper.getAllRecords(PickedYear, pickedMonth, pickedDay);
         }
 
         if (ItemList != null && !ItemList.isEmpty()) {
@@ -42,11 +44,11 @@ public class RecordsActivity extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
 
-        boolean viewAll2026Records = getIntent().getBooleanExtra("viewAll2026Records", false);
+        boolean isViewAllMode = getIntent().getBooleanExtra("viewAllRecordsByYear", false);
         boolean isEditMode = getIntent().getBooleanExtra("isEditMode", false);
         boolean isDeleteMode = getIntent().getBooleanExtra("isDeleteMode", false);
 
-        if(viewAll2026Records && !isEditMode && !isDeleteMode) {
+        if(isViewAllMode && !isEditMode && !isDeleteMode) {
             return;
         }
 
@@ -58,6 +60,7 @@ public class RecordsActivity extends ListActivity {
                 intent = new Intent(RecordsActivity.this, AddEvent.class);
                 intent.putExtra("eventID", eventID);
                 intent.putExtra("editEvent", true);
+                intent.putExtra("PickedYear", getIntent().getIntExtra("PickedYear", 0));
                 intent.putExtra("PickedMonth", getIntent().getStringExtra("PickedMonth"));
                 intent.putExtra("PickedDay", getIntent().getIntExtra("PickedDay", 0));
                 startActivity(intent);

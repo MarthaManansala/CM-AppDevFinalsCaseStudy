@@ -35,7 +35,7 @@ public class HomePage extends Activity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(HomePage.this, RecordsActivity.class);
-                intent.putExtra("viewAll2026Records", true);
+                intent.putExtra("viewAllRecordsByYear", true);
                 startActivity(intent);
             }
         });
